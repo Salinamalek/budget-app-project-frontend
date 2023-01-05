@@ -1,0 +1,81 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+const API = process.env.REACT_APP_API_URL;
+
+export default function NewForm() {
+  const navigate = useNavigate();
+  const [newTransaction, setNewTransaction] = useState({
+    item_name: "",
+    amount: 0,
+    date: "",
+    from: "",
+    category: "",
+  });
+
+  const handleTextChange = (e) => {
+    setNewTransaction({ ...newTransaction, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(`${API}/transactions`, newTransaction)
+      .then((res) => {
+        setNewTransaction(res.data);
+        navigate("/transactions");
+      })
+      .catch((err) => console.log(err));
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="date">Date: </label>
+        <input
+          id="date"
+          type="date"
+          value={newTransaction.date}
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="name">Name: </label>
+        <input
+          id="name"
+          type="text"
+          value={newTransaction.item_name}
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="amount">Amount: </label>
+        <input
+          id="amount"
+          type="text"
+          value={newTransaction.amount}
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="from">From: </label>
+        <input
+          id="from"
+          type="text"
+          value={newTransaction.form}
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="category">Category: </label>
+        <input
+          id="category"
+          type="text"
+          value={newTransaction.category}
+          onChange={handleTextChange}
+          required
+        />
+        <input type="submit" />
+      </form>
+      <Link to={`/transactions`}>
+        <button>Go Back</button>
+      </Link>
+    </div>
+  );
+}
