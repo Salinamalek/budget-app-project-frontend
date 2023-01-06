@@ -3,7 +3,7 @@ import Transactions from "../components/transactions";
 export default function Index() {
   return (
     <div className="Index">
-      <h2>Index</h2>
+      <h3>Index</h3>
       <div className="transactions">
         <Transactions />
       </div>

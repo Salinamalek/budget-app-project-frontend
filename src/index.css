@@ -65,6 +65,35 @@ nav button a:hover {
   text-align: center;
 }
 
+img {
+  width: 500px;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.viewTransactions {
+  all: unset;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0.5rem 1rem;
+  background-color: rgb(114, 203, 245);
+  border-radius: 10px;
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 5px 6px, rgb(0, 0, 0, 0.1) -2px -3px 6px;
+}
+
+.view a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.view a:hover {
+  color: rgb(57, 151, 214);
+}
+
 table {
   table-layout: fixed;
   border-collapse: collapse;

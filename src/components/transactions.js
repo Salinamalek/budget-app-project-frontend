@@ -4,7 +4,6 @@ import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions() {
-  //   console.log(API);
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
@@ -14,8 +13,52 @@ export default function Transactions() {
       .catch((err) => console.log(err));
   }, []);
 
+  const getSum = (sums) => {
+    let sum = 0;
+    for (let x of sums) {
+      sum += Number(x.amount);
+    }
+    return sum.toFixed(2);
+  };
+
+  const total = getSum(transactions);
+
+  function Colors() {
+    if (total > 1000) {
+      return (
+        <h2>
+          Account Total:{" "}
+          <span style={{ color: "green" }}>
+            ${total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          </span>
+        </h2>
+      );
+    }
+    if (total > 0 && total <= 1000) {
+      return (
+        <h2>
+          Account Total:{" "}
+          <span style={{ color: "rosybrown" }}>
+            ${total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          </span>
+        </h2>
+      );
+    }
+    if (total < 0) {
+      return (
+        <h2>
+          Account Total:{" "}
+          <span style={{ color: "red" }}>
+            ${total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+          </span>
+        </h2>
+      );
+    }
+  }
+
   return (
     <div>
+      {Colors()}
       <section className="tActions">
         <table>
           <thead>
