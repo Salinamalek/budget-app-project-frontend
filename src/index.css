@@ -53,6 +53,7 @@ nav button {
 
 nav button a {
   color: rgb(114, 203, 245);
+  font-weight: bold;
 }
 
 nav button a:hover {
@@ -73,7 +74,6 @@ table {
 
 table thead tr th {
   padding: 2rem 8rem;
-  /* border-bottom: 0.5px dotted red; */
 }
 
 table tbody tr:nth-child(even) {
@@ -99,16 +99,53 @@ table tbody tr:nth-child(odd) {
 }
 
 .details {
-  border-radius: 0.5rem;
   width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: rgb(99, 210, 224);
+  position: relative;
+  left: 23%;
+}
+
+.details .card {
+  color: white;
+  border-radius: 20px;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(94, 195, 246);
   position: relative;
   left: 23%;
   box-shadow: rgb(0, 0, 0, 0.3) 3px 5px 6px, rgb(0, 0, 0, 0.1) -2px -3px 6px;
+}
+.buttons {
+  padding-left: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons div a {
+  text-decoration: none;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.buttons div a button {
+  all: unset;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  background-color: rgb(114, 203, 245);
+  border-radius: 10px;
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 5px 6px, rgb(0, 0, 0, 0.1) -2px -3px 6px;
+}
+.buttons div a button:hover {
+  color: rgb(57, 151, 214);
 }
 
 .Index h2 {

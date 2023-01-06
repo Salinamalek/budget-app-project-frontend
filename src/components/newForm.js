@@ -30,6 +30,7 @@ export default function NewForm() {
 
   return (
     <div>
+      <h1>New</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date: </label>
         <input

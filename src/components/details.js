@@ -8,6 +8,10 @@ export default function Details() {
   let { index } = useParams();
   let navigate = useNavigate();
 
+  // let transactionName =
+  //   transaction.item_name.charAt(0).toUpperCase() +
+  //   transaction.item_name.slice(1);
+
   const handleDelete = () => {
     axios
       .delete(`${API}/transactions/${index}`)
@@ -25,14 +29,14 @@ export default function Details() {
 
   return (
     <article className="details">
+      <h1>Show</h1>
       <div className="card">
         <h2>
-          {transaction.item_name} - {transaction.amount}
+          {transaction.item_name}: {transaction.amount}
         </h2>
         <h3>{transaction.date}</h3>
       </div>
       <br></br>
-
       <div className="buttons">
         <div>
           <Link to={"/transactions"}>

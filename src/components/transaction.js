@@ -5,10 +5,7 @@ export default function Transaction({ transaction, index }) {
     <tr>
       <td>{transaction.date}</td>
       <td>
-        <Link to={`/transactions/${index}`}>
-          {transaction.item_name.charAt(0).toUpperCase() +
-            transaction.item_name.slice(1)}
-        </Link>
+        <Link to={`/transactions/${index}`}>{transaction.item_name}</Link>
       </td>
       <td>{transaction.amount}</td>
     </tr>
