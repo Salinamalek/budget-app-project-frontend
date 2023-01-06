@@ -183,7 +183,7 @@ table tbody tr:nth-child(odd) {
 }
 
 .tableTitle th {
-  color: rgb(99, 210, 224);
+  color: rgb(99, 210, 224):
   padding-left: 105px;
   padding-bottom: 20px;
   justify-content: space-between;
