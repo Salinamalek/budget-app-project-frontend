@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <nav>
+    <div className="home">
       <h1>Welcome to the Budget App!</h1>
-    </nav>
+    </div>
   );
 }

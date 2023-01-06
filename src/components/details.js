@@ -12,9 +12,9 @@ export default function Details() {
     axios
       .delete(`${API}/transactions/${index}`)
       .then(() => {
-        navigate("/transactions");
+        navigate(`/transactions`);
       })
-      .catch((err) => console.transaction(err));
+      .catch((err) => console.log(err));
   };
   useEffect(() => {
     axios

@@ -4,7 +4,9 @@ export default function Index() {
   return (
     <div className="Index">
       <h2>Index</h2>
-      <Transactions />
+      <div className="transactions">
+        <Transactions />
+      </div>
     </div>
   );
 }

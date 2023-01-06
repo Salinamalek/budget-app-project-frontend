@@ -16,10 +16,10 @@ export default function Transactions() {
 
   return (
     <div>
-      <section>
+      <section className="tActions">
         <table>
           <thead>
-            <tr>
+            <tr className="tableTitle">
               <th>Date</th>
               <th>Name</th>
               <th>Amount</th>

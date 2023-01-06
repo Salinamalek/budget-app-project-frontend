@@ -6,7 +6,7 @@ import Details from "./components/details";
 import NewForm from "./components/newForm";
 import EditForm from "./components/editForm";
 import Error from "./components/error";
-// import "./App.css";
+// import "./index.css";
 
 function App() {
   return (

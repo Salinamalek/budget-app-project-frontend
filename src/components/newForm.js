@@ -39,9 +39,9 @@ export default function NewForm() {
           onChange={handleTextChange}
           required
         />
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="item_name">Name: </label>
         <input
-          id="name"
+          id="item_name"
           type="text"
           value={newTransaction.item_name}
           onChange={handleTextChange}
@@ -50,7 +50,7 @@ export default function NewForm() {
         <label htmlFor="amount">Amount: </label>
         <input
           id="amount"
-          type="text"
+          type="number"
           value={newTransaction.amount}
           onChange={handleTextChange}
           required
@@ -59,7 +59,7 @@ export default function NewForm() {
         <input
           id="from"
           type="text"
-          value={newTransaction.form}
+          value={newTransaction.from}
           onChange={handleTextChange}
           required
         />

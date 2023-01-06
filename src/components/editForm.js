@@ -21,7 +21,7 @@ export default function EditForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${API}/transactions/${index}`, editTransaction)
+      .put(`${API}/transactions/${index}`, editTransaction)
       .then((res) => {
         setEditTransaction(res.data);
         navigate(`/transactions/${index}`);
@@ -47,9 +47,9 @@ export default function EditForm() {
           onChange={handleTextChange}
           required
         />
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="item_name">Name: </label>
         <input
-          id="name"
+          id="item_name"
           type="text"
           value={editTransaction.item_name}
           onChange={handleTextChange}
@@ -58,7 +58,7 @@ export default function EditForm() {
         <label htmlFor="amount">Amount: </label>
         <input
           id="amount"
-          type="text"
+          type="number"
           value={editTransaction.amount}
           onChange={handleTextChange}
           required
