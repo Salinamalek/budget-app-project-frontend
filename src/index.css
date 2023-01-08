@@ -60,15 +60,16 @@ nav button a:hover {
   color: rgb(57, 151, 214);
 }
 
-.home h1 {
+h1 {
   color: rgb(85, 201, 255);
   text-align: center;
+  margin-bottom: 10px;
 }
 
 img {
+  display: block;
   width: 500px;
   height: 300px;
-  display: block;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -97,12 +98,23 @@ img {
 table {
   table-layout: fixed;
   border-collapse: collapse;
-  width: 55%;
-  height: 55%;
+  width: 100%;
+  height: 100%;
 }
 
-table thead tr th {
-  padding: 2rem 8rem;
+.tableTitle th {
+  color: rgb(99, 210, 224);
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.tActions {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 55%;
+  position: relative;
+  left: 23%;
 }
 
 table tbody tr:nth-child(even) {
@@ -113,8 +125,22 @@ table tbody tr:nth-child(odd) {
   background-color: rgb(132, 215, 245);
 }
 
+td {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+td a {
+  color: rgb(255, 255, 255);
+}
+
+td .tranName:hover {
+  color: rgb(57, 151, 214);
+}
+
 .card {
-  padding: 5rem;
+  padding: 3rem;
   margin: 20px;
   border-radius: 0.5rem;
   width: 50%;
@@ -131,27 +157,28 @@ table tbody tr:nth-child(odd) {
   width: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
   position: relative;
   left: 23%;
+  justify-content: center;
+  text-align: center;
 }
 
 .details .card {
-  color: white;
   border-radius: 20px;
-  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   background-color: rgb(94, 195, 246);
-  position: relative;
-  left: 23%;
   box-shadow: rgb(0, 0, 0, 0.3) 3px 5px 6px, rgb(0, 0, 0, 0.1) -2px -3px 6px;
 }
+
+.details .card h3 {
+  color: white;
+  padding: 10px;
+}
+
 .buttons {
-  padding-left: 50px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -177,23 +204,70 @@ table tbody tr:nth-child(odd) {
   color: rgb(57, 151, 214);
 }
 
-.Index h2 {
+h2 {
   text-align: center;
   color: rgb(133, 172, 196);
 }
 
-.tableTitle th {
-  color: rgb(99, 210, 224):
-  padding-left: 105px;
-  padding-bottom: 20px;
-  justify-content: space-between;
+.form {
+  margin: auto;
+  width: 50%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.tActions {
-  display: flex;
-  justify-content: center;
+.form input {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.form label {
+  color: rgb(99, 210, 224);
+  font-weight: bold;
+}
+
+.form input[type] {
+  width: 100%;
+  margin: 0.5 rem;
+  padding: 0.5rem;
+}
+
+.form .submitButton input {
+  all: unset;
   text-align: center;
-  position: relative;
-  width: 100vw;
-  margin-left: -10px;
+  margin: 0;
+  padding: 10px 15px;
+  background-color: rgb(114, 203, 245);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 5px 6px, rgb(0, 0, 0, 0.1) -2px -3px 6px;
+}
+
+.form .submitButton input:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(114, 203, 245);
+}
+
+.backButton a button {
+  all: unset;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: rgb(114, 203, 245);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: rgb(0, 0, 0, 0.3) 3px 5px 6px, rgb(0, 0, 0, 0.1) -2px -3px 6px;
+}
+
+.backButton a button:hover {
+  background-color: white;
+  color: rgb(114, 203, 245);
 }

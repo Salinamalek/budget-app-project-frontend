@@ -29,8 +29,8 @@ export default function NewForm() {
   };
 
   return (
-    <div>
-      <h1>New</h1>
+    <div className="form">
+      <h2>New Transaction</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date: </label>
         <input
@@ -72,11 +72,15 @@ export default function NewForm() {
           onChange={handleTextChange}
           required
         />
-        <input type="submit" />
+        <div className="submitButton">
+          <input type="submit" />
+        </div>
       </form>
-      <Link to={`/transactions`}>
-        <button>Go Back</button>
-      </Link>
+      <div className="backButton">
+        <Link to={`/transactions`} style={{ textDecoration: "none" }}>
+          <button>Go Back</button>
+        </Link>
+      </div>
     </div>
   );
 }

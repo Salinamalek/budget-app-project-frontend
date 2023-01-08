@@ -29,12 +29,13 @@ export default function Details() {
 
   return (
     <article className="details">
-      <h1>Show</h1>
+      <h2>Transaction Details</h2>
       <div className="card">
-        <h2>
-          {transaction.item_name}: {transaction.amount}
-        </h2>
-        <h3>{transaction.date}</h3>
+        <h3>NAME: {transaction.item_name}</h3>
+        <h3>AMOUNT: ${transaction.amount}</h3>
+        <h3>DATE: {transaction.date}</h3>
+        <h3>FROM: {transaction.from}</h3>
+        <h3>CATEGORY: {transaction.category}</h3>
       </div>
       <br></br>
       <div className="buttons">

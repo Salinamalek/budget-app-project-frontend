@@ -37,7 +37,8 @@ export default function EditForm() {
   }, [index, navigate]);
 
   return (
-    <div>
+    <div className="form">
+      <h2>Edit Transaction</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date: </label>
         <input
@@ -79,11 +80,15 @@ export default function EditForm() {
           onChange={handleTextChange}
           required
         />
-        <input type="submit" />
+        <div className="submitButton">
+          <input type="submit" />
+        </div>
       </form>
-      <Link to={`/transactions/${index}`}>
-        <button>Go Back</button>
-      </Link>
+      <div className="backButton">
+        <Link to={`/transactions/${index}`} style={{ textDecoration: "none" }}>
+          <button>Go Back</button>
+        </Link>
+      </div>
     </div>
   );
 }

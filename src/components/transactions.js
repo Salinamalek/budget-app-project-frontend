@@ -65,7 +65,7 @@ export default function Transactions() {
             <tr className="tableTitle">
               <th>Date</th>
               <th>Name</th>
-              <th>Amount</th>
+              <th>Amount ($)</th>
             </tr>
           </thead>
           <tbody>

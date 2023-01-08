@@ -1,13 +1,26 @@
 import { Link } from "react-router-dom";
 
 export default function Transaction({ transaction, index }) {
+  const date = new Date(transaction.date);
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "long",
+  }).format(date);
+
   return (
     <tr>
-      <td>{transaction.date}</td>
+      <td>{formattedDate}</td>
       <td>
-        <Link to={`/transactions/${index}`}>{transaction.item_name}</Link>
+        <Link
+          className="tranName"
+          to={`/transactions/${index}`}
+          style={{ fontWeight: "bold" }}
+        >
+          {transaction.item_name}
+        </Link>
       </td>
-      <td>{transaction.amount}</td>
+      <td>
+        {transaction.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+      </td>
     </tr>
   );
 }
