@@ -19,6 +19,7 @@ export default function Transaction({ transaction, index }) {
         </Link>
       </td>
       <td>
+        {/* {transaction.amount} */}
         {transaction.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
       </td>
     </tr>
