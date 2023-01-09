@@ -32,7 +32,7 @@ export default function Details() {
       <h2>Transaction Details</h2>
       <div className="card">
         <h3>NAME: {transaction.item_name}</h3>
-        <h3>AMOUNT ($): {transaction.amount}</h3>
+        <h3>AMOUNT($): {transaction.amount}</h3>
         <h3>DATE: {transaction.date}</h3>
         <h3>FROM: {transaction.from}</h3>
         <h3>CATEGORY: {transaction.category}</h3>
