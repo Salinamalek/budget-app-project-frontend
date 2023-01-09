@@ -7,7 +7,7 @@ import Details from "./components/details";
 import NewForm from "./components/newForm";
 import EditForm from "./components/editForm";
 import Error from "./components/error";
-// import "./index.css";
+import "./App.css";
 import "./components/darkMode.css";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
     localStorage.setItem("theme", theme);
     document.body.className = theme;
   }, [theme]);
+
   return (
     <div className={`App ${theme}`}>
       <Router>

@@ -271,3 +271,14 @@ h2 {
   background-color: white;
   color: rgb(114, 203, 245);
 }
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+  margin-top: 9px;
+  margin-right: -5px;
+}
