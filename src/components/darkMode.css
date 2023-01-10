@@ -16,10 +16,17 @@
   font-size: x-large;
   margin-bottom: 10px;
   position: relative;
-  left: 93%;
+  left: 2%;
 }
 
 .theme:hover {
   background-color: rgb(119, 114, 114);
   cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+  .theme {
+    position: relative;
+    left: 3%;
+  }
 }

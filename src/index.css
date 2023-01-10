@@ -46,8 +46,9 @@ nav button {
   margin: 0.5rem 1rem;
   padding: 0.5rem 1rem;
   border: 0;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.771);
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: rgb(0, 0, 0, 0.3) 3px 5px 6px, rgb(0, 0, 0, 0.1) -2px -3px 6px;
 }
 
@@ -281,4 +282,113 @@ h2 {
   height: 30px;
   margin-top: 9px;
   margin-right: -5px;
+}
+
+@media screen and (max-width: 750px) {
+  nav {
+    background-color: rgb(77, 237, 184);
+  }
+
+  .navbar a:hover {
+    color: rgb(41, 191, 141);
+  }
+
+  nav button a {
+    color: rgb(77, 237, 184);
+  }
+
+  nav button a:hover {
+    color: rgb(41, 191, 141);
+  }
+
+  table tbody tr:nth-child(even) {
+    background-color: rgb(32, 184, 133);
+  }
+
+  table tbody tr:nth-child(odd) {
+    background-color: rgb(77, 237, 184);
+  }
+
+  .tableTitle th {
+    color: rgb(77, 237, 184);
+  }
+
+  td .tranName:hover {
+    color: rgb(18, 117, 84);
+  }
+  h1 {
+    color: rgb(77, 237, 184);
+  }
+  .viewTransactions {
+    background-color: rgb(77, 237, 184);
+  }
+  .view a:hover {
+    color: rgb(18, 117, 84);
+  }
+
+  img {
+    width: 450px;
+    height: 300px;
+  }
+
+  table tbody tr td {
+    padding: 10px;
+  }
+  table thead tr th {
+    padding: 10px;
+  }
+
+  .tActions {
+    width: 95%;
+    position: relative;
+    left: 2.5%;
+    right: 0;
+  }
+
+  .details {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+  .details .card {
+    width: 90%;
+    position: relative;
+    left: 0;
+    background-color: rgb(77, 237, 184);
+  }
+
+  .buttons div a button {
+    background-color: rgb(77, 237, 184);
+  }
+  .buttons div a button:hover {
+    color: rgb(41, 191, 141);
+  }
+
+  .form .submitButton input {
+    background-color: rgb(77, 237, 184);
+    color: white;
+  }
+
+  .form .submitButton input:hover {
+    background-color: white;
+    color: rgb(41, 191, 141);
+  }
+
+  .backButton a button {
+    background-color: rgb(77, 237, 184);
+    color: white;
+  }
+
+  .backButton a button:hover {
+    background-color: white;
+    color: rgb(41, 191, 141);
+  }
+  h2 {
+    color: rgb(162, 253, 222);
+    padding-bottom: 10px;
+  }
+
+  .form label {
+    color: rgb(77, 237, 184);
+  }
 }
